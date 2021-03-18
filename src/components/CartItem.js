@@ -13,8 +13,6 @@ const CartItem = ({
   price,
   amount,
   remove,
-  increase,
-  decrease,
   toggle
 }) => {
   return (
