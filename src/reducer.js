@@ -1,6 +1,4 @@
 import {
-  DECREASE,
-  INCREASE,
   CLEAR_CART,
   REMOVE,
   GET_TOTALS,

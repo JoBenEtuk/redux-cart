@@ -4,8 +4,7 @@ import {
   INCREASE,
   DECREASE,
   REMOVE,
-  TOGGLE_AMOUNT,
-  removeItem
+  TOGGLE_AMOUNT
 } from "../actions";
 const CartItem = ({
   img,
@@ -59,7 +58,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const { id, amount } = ownProps;
 
   return {
-    remove: () => dispatch(removeItem(id)),
+    remove: () => dispatch({ type: REMOVE, payload: { id } }),
     increase: () => dispatch({ type: INCREASE, payload: { id } }),
     decrease: () => dispatch({ type: DECREASE, payload: { id, amount } }),
     toggle: toggle => dispatch({ type: TOGGLE_AMOUNT, payload: { id, toggle } })
